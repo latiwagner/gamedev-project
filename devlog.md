@@ -2,7 +2,7 @@
 * Name: Casey Reardon
 * [Trello Board](https://trello.com/b/Avqr8HAu)
 * [Proposal](proposal.pdf)
-* [Other docs](todo)
+* [Itch.io](https://deadname-th.itch.io/gamedev-project)
 
 ### 2024-09-24 - 1hr: Created repo, added devlog.
 * Created github repo
