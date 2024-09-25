@@ -4,7 +4,8 @@
 * [Proposal](proposal.pdf)
 * [Itch.io](https://deadname-th.itch.io/gamedev-project)
 
-### 2024-09-24 - 1hr: Created repo, added devlog.
+### 2024-09-24 - 3hr: repo, devlog, trello, itch.io.
 * Created github repo
-* added Devlog.md
-* TODO: still need to add proposal to this
+* Added devlog.md and proposal.pdf
+* Made trello page
+* Exported the game and uploaded to itch.io, playable in browser 
