@@ -10,8 +10,13 @@
 * Made trello page
 * Exported the game and uploaded to itch.io, playable in browser.
 
-## 2024-10-03 : 2hr: imported Brackey's platformer template
+## 2024-10-03 - 2hr: imported Brackey's platformer template
 * Re-watched the Brackey tutorial. I thought I would better absorb the information on a second watch, and I think it worked.
 * Added the platformer to this project. Will be heavily modified in the future, of course.
 * Fixed the killzone not working as intended.
 * Adjusted movement speed and jump height.
+
+## 2024-10-06 - 2hr: Watched the GDQuest video
+* Watched the GDQuest top-down shooter video. 
+* While I am not making a top-down shooter, a lot of the information in the video is still relevant to me such as enemies that follow the player, healthbars, and the weapon that fires projectiles.
+* The weapon in the video is coded to aim at enemies automatically. I will need to find out how to have it aim at the cursor.
