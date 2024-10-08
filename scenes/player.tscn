@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://fjdt5lqmxwyi"]
+[gd_scene load_steps=26 format=3 uid="uid://fjdt5lqmxwyi"]
 
 [ext_resource type="Texture2D" uid="uid://nbfflh5ercii" path="res://sprites/knight.png" id="1_hvn3g"]
+[ext_resource type="PackedScene" uid="uid://cqj4f0xu33cj5" path="res://scenes/gun.tscn" id="2_y5cta"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5veqp"]
 atlas = ExtResource("1_hvn3g")
@@ -176,9 +177,12 @@ collision_layer = 2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_8hchv")
-animation = &"jump"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_krh2f")
+
+[node name="gun" parent="." instance=ExtResource("2_y5cta")]
+position = Vector2(0, -5)
