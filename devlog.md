@@ -4,22 +4,8 @@
 * [Proposal](proposal.pdf)
 * [Itch.io](https://deadname-th.itch.io/gamedev-project)
 
-### 2024-09-24 - 3hr: repo, devlog, trello, itch.io.
-* Created github repo
-* Added devlog.md and proposal.pdf
-* Made trello page
-* Exported the game and uploaded to itch.io, playable in browser.
-
-## 2024-10-03 - 2hr: imported Brackey's platformer template
-* Re-watched the Brackey tutorial. I thought I would better absorb the information on a second watch, and I think it worked.
-* Added the platformer to this project. Will be heavily modified in the future, of course.
-* Fixed the killzone not working as intended.
-* Adjusted movement speed and jump height.
-
-## 2024-10-06 - 2hr: Watched the GDQuest video
-* Watched the GDQuest top-down shooter video. 
-* While I am not making a top-down shooter, a lot of the information in the video is still relevant to me such as enemies that follow the player, healthbars, and the weapon that fires projectiles.
-* The weapon in the video is coded to aim at enemies automatically. I will need to find out how to have it aim at the cursor.
+## 2024-10-13 - 1hr: prototype level
+* Created a small and very rudimentary level that will be used for playtesting
 
 ## 2024-10-07 - 2.5hr: Added shooting mechanic
 * Added a weapon that rotates around the player. The weapon looks at the mouse.
@@ -29,3 +15,20 @@
 * Used the [GDQuest top-down shooter video](https://www.youtube.com/watch?v=GwCiGixlqiU&list=WL&index=84) and
  [this video on creating a shooting mechanic](https://www.youtube.com/watch?v=Aqzpx2f4X6Q) as references.
 * Adjusted movement speed again.
+
+## 2024-10-06 - 2hr: Watched the GDQuest video
+* Watched the GDQuest top-down shooter video. 
+* While I am not making a top-down shooter, a lot of the information in the video is still relevant to me such as enemies that follow the player, healthbars, and the weapon that fires projectiles.
+* The weapon in the video is coded to aim at enemies automatically. I will need to find out how to have it aim at the cursor.
+
+## 2024-10-03 - 2hr: imported Brackey's platformer template
+* Re-watched the Brackey tutorial. I thought I would better absorb the information on a second watch, and I think it worked.
+* Added the platformer to this project. Will be heavily modified in the future, of course.
+* Fixed the killzone not working as intended.
+* Adjusted movement speed and jump height.
+
+### 2024-09-24 - 3hr: repo, devlog, trello, itch.io.
+* Created github repo
+* Added devlog.md and proposal.pdf
+* Made trello page
+* Exported the game and uploaded to itch.io, playable in browser.
