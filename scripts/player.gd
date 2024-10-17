@@ -5,6 +5,7 @@ const SPEED = 130.0
 const JUMP_VELOCITY = -280.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var gun: Node2D = $gun
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -19,9 +20,9 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move_left", "move_right")
 	
-	if direction > 0:
+	if gun.direction > 0:
 		animated_sprite.flip_h = false
-	elif direction < 0:
+	elif gun.direction < 0:
 		animated_sprite.flip_h = true
 	
 	if is_on_floor():

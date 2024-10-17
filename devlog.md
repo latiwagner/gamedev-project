@@ -4,6 +4,16 @@
 * [Proposal](proposal.pdf)
 * [Itch.io](https://deadname-th.itch.io/gamedev-project)
 
+## 2024-10-16 - 3.25hr: ammo, reloading, more
+* Ammo added. 12 bullets, cannot fire after reaching 0.
+* Reloading added. Plays a simple animation during which you can't shoot before setting your ammo back to 12. Can only reload if your ammo isn't already full.
+* Used [this video](https://www.youtube.com/watch?v=YAoueKaqhkc) for reference on the above.
+* Slight delay after each shot before you can fire again. Can now hold down the fire button to fire automatically.
+* Player sprite now looks in the direction you're aiming rather than the direction you're moving.
+* Made bullets a bit larger.
+* Fixed an issue in which bullets weren't coming out of the correct spot when aiming to the left.
+* TODO: next task is to display current ammo count on the screen.
+
 ## 2024-10-16 - 2.5hr: enemy
 * Created an enemy that moves towards the player. Player dies on contact. 
 * The enemy dies after being shot a few times.
