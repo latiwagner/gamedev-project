@@ -4,6 +4,12 @@
 * [Proposal](proposal.pdf)
 * [Itch.io](https://deadname-th.itch.io/gamedev-project)
 
+## 2024-10-16 - 2.5hr: enemy
+* Created an enemy that moves towards the player. Player dies on contact. 
+* The enemy dies after being shot a few times.
+* Much of this time was spent trying to fix weird problems.
+* Gun sprite flips correctly. 
+
 ## 2024-10-13 - 1hr: prototype level
 * Created a small and very rudimentary level that will be used for playtesting
 

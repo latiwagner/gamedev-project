@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm3s7dmxp03vg"]
+
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="1_aolgb"]
+[ext_resource type="Texture2D" uid="uid://dwd1wfcp8eq62" path="res://sprites/circle.png" id="2_veeld"]
+[ext_resource type="PackedScene" uid="uid://b8435kgwtf0y4" path="res://scenes/killzone.tscn" id="3_4ql66"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_trhhx"]
+radius = 20.5065
+
+[node name="enemy" type="CharacterBody2D"]
+scale = Vector2(0.487649, 0.487649)
+collision_mask = 2
+script = ExtResource("1_aolgb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, 3.8147e-06)
+scale = Vector2(0.328767, 0.328767)
+texture = ExtResource("2_veeld")
+
+[node name="killzone" parent="." instance=ExtResource("3_4ql66")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+shape = SubResource("CircleShape2D_trhhx")

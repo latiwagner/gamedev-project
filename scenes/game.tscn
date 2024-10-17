@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://gu4yc4ub5y2o"]
+[gd_scene load_steps=13 format=3 uid="uid://gu4yc4ub5y2o"]
 
 [ext_resource type="PackedScene" uid="uid://fjdt5lqmxwyi" path="res://scenes/player.tscn" id="1_h0h1p"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_6ssop"]
 [ext_resource type="Texture2D" uid="uid://bi703yfid5yak" path="res://sprites/world_tileset.png" id="3_3v75m"]
 [ext_resource type="PackedScene" uid="uid://c8xdkvfy3sv16" path="res://scenes/platform.tscn" id="3_j7h00"]
 [ext_resource type="PackedScene" uid="uid://b8435kgwtf0y4" path="res://scenes/killzone.tscn" id="5_isc0w"]
+[ext_resource type="PackedScene" uid="uid://cvklerc4ppb5n" path="res://scenes/enemy.tscn" id="6_7ueup"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b2njl"]
 texture = ExtResource("3_3v75m")
@@ -283,4 +284,5 @@ position = Vector2(46, 84)
 z_index = 5
 shape = SubResource("WorldBoundaryShape2D_6r5a7")
 
-[connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]
+[node name="enemy" parent="." instance=ExtResource("6_7ueup")]
+position = Vector2(-53, -68)
