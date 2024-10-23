@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://gu4yc4ub5y2o"]
+[gd_scene load_steps=14 format=3 uid="uid://gu4yc4ub5y2o"]
 
 [ext_resource type="PackedScene" uid="uid://fjdt5lqmxwyi" path="res://scenes/player.tscn" id="1_h0h1p"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_6ssop"]
+[ext_resource type="Script" path="res://scenes/ammo_count.gd" id="3_2qk45"]
 [ext_resource type="Texture2D" uid="uid://bi703yfid5yak" path="res://sprites/world_tileset.png" id="3_3v75m"]
 [ext_resource type="PackedScene" uid="uid://c8xdkvfy3sv16" path="res://scenes/platform.tscn" id="3_j7h00"]
 [ext_resource type="PackedScene" uid="uid://b8435kgwtf0y4" path="res://scenes/killzone.tscn" id="5_isc0w"]
@@ -286,3 +287,20 @@ shape = SubResource("WorldBoundaryShape2D_6r5a7")
 
 [node name="enemy" parent="." instance=ExtResource("6_7ueup")]
 position = Vector2(-53, -68)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 2
+offset = Vector2(43, -4)
+transform = Transform2D(1, 0, 0, 1, 43, -4)
+
+[node name="AmmoCount" type="RichTextLabel" parent="HUD"]
+offset_left = 914.0
+offset_top = 556.0
+offset_right = 1063.0
+offset_bottom = 619.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/normal_font_size = 42
+bbcode_enabled = true
+text = "[right]12 / 12[right]"
+script = ExtResource("3_2qk45")

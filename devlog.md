@@ -4,7 +4,12 @@
 * [Proposal](proposal.pdf)
 * [Itch.io](https://deadname-th.itch.io/gamedev-project)
 
-## 2024-10-16 - 3.25hr: ammo, reloading, more
+## 2024-10-23 - 1.5hr: ammo counter
+* added an ammo counter.
+* The ammo counter stays in a consistent spot on the screen.
+* Tried to attach the ammo counter to the camera, but this caused weird problems with camera smoothing. So, I attached the ammo counter to a canvaslayer instead. This worked perfectly.
+
+## 2024-10-19 - 3.25hr: ammo, reloading, more
 * Ammo added. 12 bullets, cannot fire after reaching 0.
 * Reloading added. Plays a simple animation during which you can't shoot before setting your ammo back to 12. Can only reload if your ammo isn't already full.
 * Used [this video](https://www.youtube.com/watch?v=YAoueKaqhkc) for reference on the above.

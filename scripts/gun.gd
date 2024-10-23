@@ -6,8 +6,8 @@ const BULLET = preload("res://scenes/bullet.tscn")
 @onready var attack_speed: Timer = $attackSpeed
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @export var direction = -1
-var max_ammo = 12
-var current_ammo = max_ammo
+@export var max_ammo = 12
+@export var current_ammo = max_ammo
 var reloading = false
 
 
