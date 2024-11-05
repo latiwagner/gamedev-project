@@ -4,6 +4,10 @@
 * [Proposal](proposal.pdf)
 * [Itch.io](https://deadname-th.itch.io/gamedev-project)
 
+## 2024-11-4 - 1.5 hr
+* added a bouncing enemy.
+* Enemy slowly accelerates with each bounce. Has a maximum velocity so it doesn't get out of control.
+
 ## 2024-10-23 - 1.5hr: ammo counter
 * added an ammo counter.
 * The ammo counter stays in a consistent spot on the screen.

@@ -23,6 +23,7 @@ texture = ExtResource("1_s6oyx")
 [node name="killzone" parent="." instance=ExtResource("3_cjuor")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+scale = Vector2(1.09704, 1.09704)
 shape = SubResource("CircleShape2D_trhhx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

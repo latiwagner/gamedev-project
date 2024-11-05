@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://chbvpk7fy3h2y"]
+
+[ext_resource type="Texture2D" uid="uid://dwd1wfcp8eq62" path="res://sprites/circle.png" id="1_15m06"]
+[ext_resource type="Script" path="res://scenes/bounce_enemy.gd" id="1_l88r6"]
+[ext_resource type="PackedScene" uid="uid://b8435kgwtf0y4" path="res://scenes/killzone.tscn" id="2_062fl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_82kbq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u2tna"]
+
+[node name="bounceEnemy" type="CharacterBody2D"]
+script = ExtResource("1_l88r6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("1_15m06")
+
+[node name="killzone" parent="." instance=ExtResource("2_062fl")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+scale = Vector2(2.34814, 2.34814)
+shape = SubResource("CircleShape2D_82kbq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.98612, 1.98612)
+shape = SubResource("CircleShape2D_u2tna")
