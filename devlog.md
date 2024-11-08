@@ -4,6 +4,11 @@
 * [Proposal](proposal.pdf)
 * [Itch.io](https://deadname-th.itch.io/gamedev-project)
 
+## 2024-11-7 - 2 hr
+* made sprites for enemies.
+* also made a muzzle flash sprite
+* not actually implemented at this point. 
+
 ## 2024-11-4 - 1.5 hr
 * added a bouncing enemy.
 * Enemy slowly accelerates with each bounce. Has a maximum velocity so it doesn't get out of control.

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chu00p3se42tj"
-path="res://.godot/imported/coin.png-54d5e156d7891d9603a51f76f85b4fd9.ctex"
+uid="uid://s13d7hs4i7dv"
+path="res://.godot/imported/swarmer.png-02bc773b78deb67e47e35338fb47458b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/coin.png"
-dest_files=["res://.godot/imported/coin.png-54d5e156d7891d9603a51f76f85b4fd9.ctex"]
+source_file="res://sprites/swarmer.png"
+dest_files=["res://.godot/imported/swarmer.png-02bc773b78deb67e47e35338fb47458b.ctex"]
 
 [params]
 

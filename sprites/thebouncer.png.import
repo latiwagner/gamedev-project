@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clxbvmjau8h5j"
-path="res://.godot/imported/slime_green.png-d23936e8ad50c1f02045d1fdaace456b.ctex"
+uid="uid://dig6t4cjk66kj"
+path="res://.godot/imported/thebouncer.png-07eb4467ac4bf737e03c62d37ba43eef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/slime_green.png"
-dest_files=["res://.godot/imported/slime_green.png-d23936e8ad50c1f02045d1fdaace456b.ctex"]
+source_file="res://sprites/thebouncer.png"
+dest_files=["res://.godot/imported/thebouncer.png-07eb4467ac4bf737e03c62d37ba43eef.ctex"]
 
 [params]
 
