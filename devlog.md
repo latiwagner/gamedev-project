@@ -4,6 +4,12 @@
 * [Proposal](proposal.pdf)
 * [Itch.io](https://deadname-th.itch.io/gamedev-project)
 
+## 2024-11-18 - 3 hr
+* implemented a simple firing animation. The weapon recoils backwards and muzzle flash appears for a frame.
+* Added a crosshair that replaces the cursor while ingame.
+* Minor balancing changes.
+* Spent time finding some royalty free sound effects for the weapon. 
+
 ## 2024-11-7 - 2 hr
 * made sprites for enemies.
 * also made a muzzle flash sprite

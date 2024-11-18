@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var health = 4
-var max_velocity = 300
+var max_velocity = 225
 @export var start_velocity = Vector2(100, 100)
 @onready var player: CharacterBody2D = $"../player"
 
