@@ -4,6 +4,13 @@
 * [Proposal](proposal.pdf)
 * [Itch.io](https://deadname-th.itch.io/gamedev-project)
 
+## 2024-11-19 - 1.25 hr
+* Implemented a way to have enemies spawn at specific parts of the level using a collision trigger.
+* Toggles on visibility for enemies. When enemy visiblility is false, they are inactive and don't take damage. 
+* Added firing sound
+* Improved folder structure somewhat
+
+
 ## 2024-11-18 - 3 hr
 * implemented a simple firing animation. The weapon recoils backwards and muzzle flash appears for a frame.
 * Added a crosshair that replaces the cursor while ingame.

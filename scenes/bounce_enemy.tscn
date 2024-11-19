@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://chbvpk7fy3h2y"]
 
 [ext_resource type="Texture2D" uid="uid://dwd1wfcp8eq62" path="res://sprites/circle.png" id="1_15m06"]
-[ext_resource type="Script" path="res://scenes/bounce_enemy.gd" id="1_l88r6"]
+[ext_resource type="Script" path="res://scripts/bounce_enemy.gd" id="1_l88r6"]
 [ext_resource type="PackedScene" uid="uid://b8435kgwtf0y4" path="res://scenes/killzone.tscn" id="2_062fl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_82kbq"]
