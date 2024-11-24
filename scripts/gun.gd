@@ -5,9 +5,12 @@ const BULLET = preload("res://scenes/bullet.tscn")
 @onready var sprite_2d: Sprite2D = $pivot/Sprite2D
 @onready var attack_speed: Timer = $attackSpeed
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var empty_sound: AudioStreamPlayer2D = $sounds/emptySound
 @export var direction = -1
 @export var max_ammo = 12
 @export var current_ammo = max_ammo
+
+
 var reloading = false
 
 
@@ -25,6 +28,9 @@ func _physics_process(_delta):
 		animation_player.play("fire")
 		attack_speed.start()
 		current_ammo -= 1
+	elif Input.is_action_pressed("fire") and attack_speed.is_stopped() and current_ammo == 0 and !reloading:
+		empty_sound.play()
+		attack_speed.start()
 		
 	if Input.is_action_pressed("reload") and current_ammo != max_ammo:
 		reloading = true

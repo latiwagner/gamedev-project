@@ -1,0 +1,164 @@
+[gd_scene load_steps=10 format=3 uid="uid://flmtf7c4enay"]
+
+[ext_resource type="Texture2D" uid="uid://s13d7hs4i7dv" path="res://sprites/swarmer.png" id="1_2k22p"]
+[ext_resource type="PackedScene" uid="uid://b8435kgwtf0y4" path="res://scenes/killzone.tscn" id="1_6a4ep"]
+[ext_resource type="Script" path="res://scenes/swarm_enemy.gd" id="1_e88kd"]
+[ext_resource type="AudioStream" uid="uid://c00s7esawmkrc" path="res://sounds/explosion.wav" id="2_s6gco"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5gla"]
+size = Vector2(3.40695, 3.40695)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cq5cs"]
+size = Vector2(3.02097, 3.02097)
+
+[sub_resource type="Animation" id="Animation_57ob3"]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sounds/deathSound:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("killzone/Hitbox:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.466667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_t8sfi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sounds/deathSound:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("killzone/Hitbox:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_38jvi"]
+_data = {
+"RESET": SubResource("Animation_t8sfi"),
+"death": SubResource("Animation_57ob3")
+}
+
+[node name="swarm_enemy" type="CharacterBody2D"]
+scale = Vector2(1.25, 1.25)
+script = ExtResource("1_e88kd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2k22p")
+
+[node name="killzone" parent="." instance=ExtResource("1_6a4ep")]
+
+[node name="Hitbox" type="CollisionShape2D" parent="killzone"]
+scale = Vector2(2.34814, 2.34814)
+shape = SubResource("RectangleShape2D_p5gla")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.19209e-07, -1.19209e-07)
+scale = Vector2(1.98612, 1.98612)
+shape = SubResource("RectangleShape2D_cq5cs")
+
+[node name="sounds" type="Node" parent="."]
+
+[node name="deathSound" type="AudioStreamPlayer2D" parent="sounds"]
+scale = Vector2(0.487649, 0.487649)
+stream = ExtResource("2_s6gco")
+bus = &"sfx"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_38jvi")
+}

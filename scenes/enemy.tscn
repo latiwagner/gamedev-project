@@ -1,8 +1,44 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvklerc4ppb5n"]
+[gd_scene load_steps=15 format=3 uid="uid://cvklerc4ppb5n"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_f2ni0"]
-[ext_resource type="Texture2D" uid="uid://dwd1wfcp8eq62" path="res://sprites/circle.png" id="1_s6oyx"]
 [ext_resource type="PackedScene" uid="uid://b8435kgwtf0y4" path="res://scenes/killzone.tscn" id="3_cjuor"]
+[ext_resource type="Texture2D" uid="uid://dub8bdgktkey6" path="res://sprites/melee.png" id="3_eu3m8"]
+[ext_resource type="AudioStream" uid="uid://c00s7esawmkrc" path="res://sounds/explosion.wav" id="4_fa6lv"]
+[ext_resource type="AudioStream" uid="uid://caglmvplsmd8w" path="res://sounds/hurt.wav" id="4_uryf0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pv4v8"]
+atlas = ExtResource("3_eu3m8")
+region = Rect2(23, 0, 23, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otp7m"]
+atlas = ExtResource("3_eu3m8")
+region = Rect2(0, 0, 23, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgt1y"]
+atlas = ExtResource("3_eu3m8")
+region = Rect2(0, 0, 23, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6dajr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pv4v8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otp7m")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgt1y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 30.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_trhhx"]
 radius = 20.5065
@@ -10,21 +46,161 @@ radius = 20.5065
 [sub_resource type="CircleShape2D" id="CircleShape2D_5khk8"]
 radius = 18.4559
 
+[sub_resource type="Animation" id="Animation_1nf3v"]
+resource_name = "death"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sounds/deathSound:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("killzone/Hitbox:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.433333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_dnee1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sounds/deathSound:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("killzone/Hitbox:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_emmwj"]
+_data = {
+"RESET": SubResource("Animation_dnee1"),
+"death": SubResource("Animation_1nf3v")
+}
+
 [node name="enemy" type="CharacterBody2D"]
 scale = Vector2(0.487649, 0.487649)
 collision_mask = 2
 script = ExtResource("1_f2ni0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1.90735e-06, 3.8147e-06)
-scale = Vector2(0.328767, 0.328767)
-texture = ExtResource("1_s6oyx")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_6dajr")
+animation = &"idle"
 
 [node name="killzone" parent="." instance=ExtResource("3_cjuor")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+[node name="Hitbox" type="CollisionShape2D" parent="killzone"]
 scale = Vector2(1.09704, 1.09704)
 shape = SubResource("CircleShape2D_trhhx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_5khk8")
+
+[node name="sounds" type="Node" parent="."]
+
+[node name="hurtSound" type="AudioStreamPlayer2D" parent="sounds"]
+scale = Vector2(0.487649, 0.487649)
+stream = ExtResource("4_uryf0")
+bus = &"sfx"
+
+[node name="deathSound" type="AudioStreamPlayer2D" parent="sounds"]
+scale = Vector2(0.487649, 0.487649)
+stream = ExtResource("4_fa6lv")
+bus = &"sfx"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_emmwj")
+}

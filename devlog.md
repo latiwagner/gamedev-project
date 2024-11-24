@@ -4,12 +4,17 @@
 * [Proposal](proposal.pdf)
 * [Itch.io](https://deadname-th.itch.io/gamedev-project)
 
+## 2024-11-24 - 3 hr
+* Added a lot of sound effects. Trying to shoot with an empty clip, reloading, enemy taking damage, enemy dying.
+* Added missing sprites
+* Added swarmer enemy. same as basic melee enemy, but is smaller, faster, and has less health. In the demo level it will spawn in small groups.
+* More balancing to make the game a bit easier.
+
 ## 2024-11-19 - 1.25 hr
 * Implemented a way to have enemies spawn at specific parts of the level using a collision trigger.
 * Toggles on visibility for enemies. When enemy visiblility is false, they are inactive and don't take damage. 
 * Added firing sound
 * Improved folder structure somewhat
-
 
 ## 2024-11-18 - 3 hr
 * implemented a simple firing animation. The weapon recoils backwards and muzzle flash appears for a frame.
