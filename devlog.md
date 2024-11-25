@@ -4,7 +4,11 @@
 * [Proposal](proposal.pdf)
 * [Itch.io](https://deadname-th.itch.io/gamedev-project)
 
-## 2024-11-24 - 3 hr
+## 2024-11-24 - 2.75 hr
+* Created demo level.
+* This includes enemies and spawn triggers. There are three encounters overall. The bouncing enemy appears at the end as a boss of sorts.
+
+## 2024-11-23 - 3 hr
 * Added a lot of sound effects. Trying to shoot with an empty clip, reloading, enemy taking damage, enemy dying.
 * Added missing sprites
 * Added swarmer enemy. same as basic melee enemy, but is smaller, faster, and has less health. In the demo level it will spawn in small groups.

@@ -4,9 +4,9 @@ extends CharacterBody2D
 @onready var hurt_sound: AudioStreamPlayer2D = $sounds/hurtSound
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-var health = 5
+var health = 7
 var max_velocity = 180
-@export var start_velocity = Vector2(85, 85)
+@export var start_velocity = Vector2(95, 95)
 
 func _ready():
 	animated_sprite_2d.play("idle")
